@@ -1,0 +1,47 @@
+
+
+import java.util.*;
+
+public class scratch_34 {
+    public static void main(String[] args)
+    {
+
+        // create an ArrayDeque which going to
+        // contains a list of Objects
+        ArrayDeque<batch> list = new ArrayDeque<batch>();
+
+        // Add Objects to list
+        list.add(new batch("CSE", 67));
+        list.add(new batch("ECE", 57));
+        list.add(new batch("IT", 90));
+        list.add(new batch("ME", 78));
+
+        // print result
+        System.out.println("list of Objects:");
+
+        // forEach method of ArrayDeque and
+        // print student names
+        list.forEach((n) -> print(n));
+    }
+
+    // printing details of object
+    public static void print(batch n)
+    {
+        System.out.println("*******************************");
+        System.out.println("Batch Name is " + n.name);
+        System.out.println("No of Students are " + n.noOfStudents);
+    }
+}
+
+// create a class
+class batch {
+
+    String name;
+    int noOfStudents;
+
+    batch(String name, int noOfStudents)
+    {
+        this.name = name;
+        this.noOfStudents = noOfStudents;
+    }
+}
